@@ -1,0 +1,31 @@
+{
+    "namespace": "my.namespace",
+    "type": "record",
+    "name": "person",
+    "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "noses",
+      "type": {
+        "items": {
+          "fields": [
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "shape",
+              "type": "string"
+            }
+          ],
+          "name": "nose",
+          "type": "record"
+        },
+        "type": "array"
+      }
+    }
+  ]
+}
